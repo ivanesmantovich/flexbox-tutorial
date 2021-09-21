@@ -1,38 +1,104 @@
 @import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,400;0,700;1,500;1,700&display=swap');
 
-body {
+* {
 	font-family: 'Azeret Mono', serif;
+	color: #444444;
+}
+
+body {
 	background-color: #eee;
 }
 
-.wrapper {
-	width: 100%;
-	max-width: 960px;
-	margin: 0 auto;
+/* List styles */
+
+nav ul {
+	list-style-type: none;
+	padding: 0;
 }
 
-.flex-container {
+nav a {
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	padding: 10px;
+}
+
+/* Flex styles */
+
+nav ul.socials {
+	display: flex;
+	flex: 1 1 0;
+	justify-content: center;
+}
+
+nav ul.socials li {
+	flex: 1 1 0;
+	max-width: 50px;
+}
+
+/* Flex styles */
+
+@media screen and (min-width: 768px) {
+
+	nav {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	nav ul {
+		display: flex;
+	}
+
+	nav ul li {
+		flex: 1 1 0;
+		white-space: nowrap;
+	}
+
+	nav ul.socials {
+		justify-content: flex-end;
+	}
+}
+
+.squares {
 	display: flex;
 	flex-wrap: wrap;
-	background-color: #fff;
+	background-color: white;
+	/* flex-flow: column; */
 }
 
-.box {
+.square {
 	height: 100px;
-	flex-grow: 1;
+	flex: 0 0 100px;
 }
 
 .one {
-	flex-basis: 100px;
-	background-color: red;
+	background-color: pink;
 }
 
 .two {
-	flex-basis: 200px;
-	background-color: green;
+	background-color: cyan;
 }
 
 .three {
-	flex-basis: 300px;
-	background-color: blue;
-} 
+	background-color: yellow;
+}
+
+/* Articles styles */
+
+#blocks {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+#blocks article {
+	padding: 10px;
+	box-sizing: border-box;
+	flex: 0 1 32%;
+}
+
+#blocks article.stack {
+	flex: 0 1 100%;
+}
+
+/* Articles styles */
