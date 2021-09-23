@@ -62,8 +62,7 @@ nav ul.socials li {
 .squares {
 	display: flex;
 	flex-wrap: wrap;
-	background-color: white;
-	/* flex-flow: column; */
+	justify-content: center;
 }
 
 .square {
